@@ -1,0 +1,17 @@
+///this is used to find the maximum contiguous subarray
+
+
+ public static int  kadanes(int a[])
+                {
+                    int max=a[0];
+                    int res=a[0];
+                    int n=a.length;
+                    for(int i=1;i<n;i++)
+                    {
+                        max=Math.max(a[i]+max,a[i]);
+                                res=Math.max(max,res);
+
+                    }
+
+                return res;
+                }
