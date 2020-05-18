@@ -1,0 +1,53 @@
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int T= sc.nextInt();
+		while(T-->0)
+		{
+		    int size = sc.nextInt();
+		    int a[] = new int[size];
+		    
+		    for(int i=0;i<size;i++)
+		    {
+		        a[i]=sc.nextInt();
+		    }
+		    
+		    tripletSum(a);
+		    System.out.println();
+		}
+	}
+	
+	
+	public static void tripletSum(int a[])
+	{
+	    
+	    int n=a.length;
+
+        HashSet<Integer> hs = new HashSet<>();
+
+        for(int i=0;i<n;i++){hs.add(a[i]);}
+
+        int counter =0;
+        for(int i=0;i<n;i++)
+        {
+            for(int j=i+1;j<n;j++)
+            {
+                if(hs.contains(a[i]+a[j])==true)
+                {counter=counter+1;}
+
+
+            }
+
+        }
+
+        System.out.print(counter==0?-1:counter);
+	    
+	}
+	
+}
