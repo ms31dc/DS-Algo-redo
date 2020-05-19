@@ -1,7 +1,7 @@
 1. To calculate the sum uptil N number use the formnula
 sum = n*n+1 divide by 2
 
-if you find the sum of n numbers and if given a array then you can subtract from the total sum of that array and your sum to find missing number
+2.if you find the sum of n numbers and if given a array then you can subtract from the total sum of that array and your sum to find missing number
 https://practice.geeksforgeeks.org/problems/missing-number-in-array/0
 
 public static void missing(int a[])
@@ -19,3 +19,9 @@ public static void missing(int a[])
 	    System.out.print(number-sum);
 	    
 	}
+3.To arrange and array alternatevely we need to use ttwo pointer approach 
+As in 1st max , 2 min , 3  max , 4 min.
+
+1,2,3,4,5,6 == 6,1,5,2,4,3
+|         |
+Print in two pointer
